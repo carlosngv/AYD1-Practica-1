@@ -42,6 +42,20 @@ function fib(n) {
 }
 
 
+// raiz cubica
+router.get('/raiz/:numero', (req = Request, res) => {
+
+    const { numero } = req.params;
+
+    const cubica = Math.pow(numero, 1 / 3);
+
+    return res.json({
+        raiz_cubica: cubica
+    })
+
+})
+
+
 module.exports = {
     router,
 }
