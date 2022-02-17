@@ -5,6 +5,9 @@ router.get('/api', (req, res) => {
 
 })
 
+router.get('/palindromo/:palabra',(req,res)=>{
+    var palabra = req.params.palabra
+    var pal = ""
 router.get('/primo/:NUMERO', (req, res) => {
     var numero =req.params.NUMERO;
     if(numero == 2 || numero==3) {
@@ -26,6 +29,24 @@ router.get('/primo/:NUMERO', (req, res) => {
 })
 // Fibonacci
 router.get('/fibo/:numero', (req = Request, res) => {
+
+    for(var i = palabra.length-1; i >= 0; i--){
+        pal = pal + palabra[i]
+    }
+
+
+    if(palabra == pal){
+        res.json({
+            palindromo: true
+        })
+    }else{
+        res.json({
+            palindromo: false
+        })
+    }
+
+})
+
 
     const { numero } = req.params
 
