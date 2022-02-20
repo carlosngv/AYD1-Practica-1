@@ -47,7 +47,7 @@ router.get('/primo/:NUMERO', (req, res) => {
                 "mensaje": `El número ${numero} no es un número primo`
             })
         }
-    }    
+    }
     return res.json({
         "mensaje": `El número ${numero} es un número primo`
     })
@@ -74,41 +74,7 @@ router.get('/potencia/:numero', (req = Request, res) => {
 })
 
 
-router.get('/palindromo/:palabra',(req,res)=>{
-    var palabra = req.params.palabra
-    var pal = ""
 
-    for(var i = palabra.length-1; i >= 0; i--){
-        pal = pal + palabra[i]
-    }
-
-
-    if(palabra == pal){
-        res.json({
-            palindromo: true
-        })
-    }else{
-        res.json({
-            palindromo: false
-        })
-    }
-
-})
-router.get('/primo/:NUMERO', (req, res) => {
-    var numero =req.params.NUMERO;
-    if(numero == 2 || numero==3) {
-        return res.json({primo: 'Es un número primo'});
-    }
-    if(numero <= 1 || numero % 2 == 0 || numero %3 == 0){
-        return res.json({primo:'No es un número primo'});
-    } 
-    for(var i = 5 ; i * i <= numero; i+=6){
-        if(numero % i ==0 || numero % (i+2)==0){
-            return res.json({primo:'No es un número primo'});
-        } 
-    }   
-    return res.json({primo: 'Es un número primo'});
-})
 
 // Fibonacci
 router.get('/fibo/:numero', (req = Request, res) => {
@@ -156,7 +122,7 @@ router.get('/multiplicacion/:num1/:num2', (req = Request, res) => {
     const respuesta  = req.params.num1 * req.params.num2;
 
     return res.json({
-        multiplicacion: respuesta
+        mensaje: `La respuesta es ${ respuesta }`,
     })
 
 })
@@ -179,7 +145,7 @@ router.get('/division/:dividendo/:divisor', (req = Request, res) => {
 
 })
 
-    
+
 module.exports = {
     router,
 }
