@@ -41,5 +41,15 @@ export class FuncionesService {
     return this.httpClient.get(ruta);
   }
 
+  calcular_multiplicacion(num1:number, num2:number):Observable<any>{
+    var ruta = this.path + 'multiplicacion/' + num1 + '/' + num2;
+    return this.httpClient.get(ruta);
+  }
+
+  calcular_division(num1:number, num2:number):Observable<any>{
+    var ruta = this.path + 'division/' + num1 + '/' + num2;
+    return this.httpClient.get(ruta);
+  }
+
 
 }

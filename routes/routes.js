@@ -137,12 +137,12 @@ router.get('/division/:dividendo/:divisor', (req = Request, res) => {
     if(req.params.divisor == 0) {
 
         return res.json({
-            division: "No se puede dividir entre cero"
+            "mensaje": `No se pueden realizar divisiones por 0`
         })
     }
 
     return res.json({
-        division: respuesta
+        "mensaje": `El resultado es: ${respuesta}`
     })
 
 })
