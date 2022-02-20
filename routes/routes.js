@@ -188,6 +188,14 @@ router.get('/multiplicacion/:num1/:num2', (req = Request, res) => {
 router.get('/division/:dividendo/:divisor', (req = Request, res) => {
 
     var respuesta = req.params.dividendo / req.params.divisor;
+
+    if(req.params.divisor == 0) {
+
+        return res.json({
+            division: "No se puede dividir entre cero"
+        })
+    }
+
     return res.json({
         division: respuesta
     })
