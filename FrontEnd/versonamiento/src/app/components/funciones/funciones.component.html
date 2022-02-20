@@ -1,6 +1,6 @@
 <div class="container">
     <h1 class="text-center mt-5">Versionamiento</h1>
-    <div class="accordion mt-5" id="accordionExample">
+    <div class="accordion mt-5 mb-5" id="accordionExample">
         <!-- palindromos -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
@@ -126,6 +126,72 @@
                             [ngModelOptions]="{ standalone: true }">
                         </div>
                         <button (click)="calcular_raiz()" type="button" class="btn btn-primary">Calcular Raiz</button>
+    
+                    </div>
+                </div>
+            </div>
+            <!-- multiplicacion -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        Feature Multiplicación
+                    </button>
+                </h2>
+                <div id="multi" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Feature Multiplicación </strong>Función que retorna la multiplicacion de los numero ingresados
+                        <br>
+                        <p class="salida text-center">{{salida_multiplicacion}}</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                <small>Ingrese el número uno</small>
+                            </label>
+                            <input type="number" class="form-control" id="numero-multi1"   [(ngModel)]="num1_multiplicacion"
+                            [ngModelOptions]="{ standalone: true }">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                <small>Ingrese el número dos</small>
+                            </label>
+                            <input type="number" class="form-control" id="numero-multi2"   [(ngModel)]="num2_multiplicacion"
+                            [ngModelOptions]="{ standalone: true }">
+                        </div>
+                        <button (click)="calcular_multiplicacion()" type="button" class="btn btn-primary">Calcular Multiplicación</button>
+    
+                    </div>
+                </div>
+            </div>
+            <!-- division -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#divi" aria-expanded="false" aria-controls="divi">
+                        Feature División
+                    </button>
+                </h2>
+                <div id="divi" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Feature División. </strong>Función que retorna la division de dos números ingresados
+                        <br>
+                        <p class="salida text-center">{{salida_division}}</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                <small>Ingrese el número uno</small>
+                            </label>
+                            <input type="number" class="form-control" id="numero-div1"   [(ngModel)]="num1_division"
+                            [ngModelOptions]="{ standalone: true }">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                <small>Ingrese el número dos</small>
+                            </label>
+                            <input type="number" class="form-control" id="numero-div2"   [(ngModel)]="num2_division"
+                            [ngModelOptions]="{ standalone: true }">
+                        </div>
+                        <button (click)="calcular_division()" type="button" class="btn btn-primary">Calcular División</button>
     
                     </div>
                 </div>
