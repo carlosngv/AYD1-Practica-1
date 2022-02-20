@@ -48,37 +48,13 @@ router.get('/primo/:NUMERO', (req, res) => {
     res.send(numero + ' es un número primo');
     return;
 })
-// Fibonacci
-router.get('/fibo/:numero', (req = Request, res) => {
 
-    const { numero } = req.params
-
-
-    const nfibo = fib(numero);
-    return res.json({
-        fibonacci: nfibo
-    })
-})
 
 function fib(n) {
     if (n <= 1)
         return n;
     return fib(n - 1) + fib(n - 2);
 }
-
-
-// raiz cubica
-router.get('/raiz/:numero', (req = Request, res) => {
-
-    const { numero } = req.params;
-
-    const cubica = Math.pow(numero, 1 / 3);
-
-    return res.json({
-        raiz_cubica: cubica
-    })
-
-})
 
 
 router.get('/potencia/:numero', (req = Request, res) => {
@@ -129,6 +105,7 @@ router.get('/primo/:NUMERO', (req, res) => {
     }   
     return res.json({primo: 'Es un número primo'});
 })
+
 // Fibonacci
 router.get('/fibo/:numero', (req = Request, res) => {
 
@@ -136,15 +113,11 @@ router.get('/fibo/:numero', (req = Request, res) => {
 
     const nfibo = fib(numero);
     return res.json({
-        fibonacci: nfibo
+        "mensaje": `El resultado es: ${nfibo}`
     })
+
 })
 
-function fib(n) {
-    if (n <= 1)
-        return n;
-    return fib(n - 1) + fib(n - 2);
-}
 
 
 // raiz cubica
@@ -155,7 +128,7 @@ router.get('/raiz/:numero', (req = Request, res) => {
     const cubica = Math.pow(numero, 1 / 3);
 
     return res.json({
-        raiz_cubica: cubica
+        "mensaje": `El resultado es: ${cubica}`
     })
 
 })
