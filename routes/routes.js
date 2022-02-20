@@ -174,6 +174,25 @@ router.get('/potencia/:numero', (req = Request, res) => {
 })
 
 
+router.get('/multiplicacion/:num1/:num2', (req = Request, res) => {
+
+    const respuesta  = req.params.num1 * req.params.num2;
+
+    return res.json({
+        multiplicacion: respuesta
+    })
+
+})
+
+
+router.get('/division/:dividendo/:divisor', (req = Request, res) => {
+
+    var respuesta = req.params.dividendo / req.params.divisor;
+    return res.json({
+        division: respuesta
+    })
+
+})
 
     
 module.exports = {
