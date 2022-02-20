@@ -20,11 +20,13 @@ router.get('/palindromo/:palabra',(req,res)=>{
 
     if(palabra == pal){
         res.json({
-            palindromo: true
+            palindromo: true,
+            "mensaje":"la palabra si es palíndromo"
         })
     }else{
         res.json({
-            palindromo: false
+            palindromo: false,
+            "mensaje":"la palabra no es palíndromo"
         })
     }
 
@@ -68,7 +70,7 @@ router.get('/potencia/:numero', (req = Request, res) => {
     const cubo = Math.pow(numero, 3);
 
     return res.json({
-        potencia_cubo: cubo
+        "mensaje": `El resultado es: ${cubo}`
     })
 
 })
