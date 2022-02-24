@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
     res.status(200).json({
         name: 'Análisis y Diseño 1',
         website: 'Práctica 1 - Grupo 3',
-        msg: 'hola'
+        msg: 'adiós'
     })
 })
 
